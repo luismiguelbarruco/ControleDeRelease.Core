@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flunt" Version="1.0.4" />
+    <PackageReference Include="LiteDB" Version="5.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ControleDeRelease.Share\ControleDeRelease.Share.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\Historico\" />
+  </ItemGroup>
+
+</Project>

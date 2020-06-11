@@ -1,0 +1,17 @@
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\ControleDeRelease.Share\bin\Debug\netcoreapp3.0\ControleDeRelease.Share.deps.json
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\ControleDeRelease.Share\bin\Debug\netcoreapp3.0\ControleDeRelease.Share.dll
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\ControleDeRelease.Share\bin\Debug\netcoreapp3.0\ControleDeRelease.Share.pdb
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.AssemblyInfo.cs
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.dll
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.pdb
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\bin\Debug\netcoreapp3.0\ControleDeRelease.Share.deps.json
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\bin\Debug\netcoreapp3.0\ControleDeRelease.Share.dll
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\bin\Debug\netcoreapp3.0\ControleDeRelease.Share.pdb
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.csprojAssemblyReference.cache
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.AssemblyInfo.cs
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.dll
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.pdb

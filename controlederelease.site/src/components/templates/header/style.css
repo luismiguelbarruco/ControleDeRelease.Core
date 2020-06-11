@@ -1,0 +1,47 @@
+.header {
+    background: #3f4448;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    color: #FFF;
+    font-size: 1.125em;
+    margin-left: 10px;
+}
+
+.header-menu ul li a {
+    color: #FFF;
+}
+
+.header-logo {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-menu li a {
+    color: #252525;
+    font-size: 1.125em;
+    padding: 0 10px;
+}
+
+.header-section {
+    border-bottom: solid 1px #e0e0e0;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.header-menu li:first-child a {
+    padding-left: 0px;
+}
+
+.logout {
+    margin-right: 10px;
+}

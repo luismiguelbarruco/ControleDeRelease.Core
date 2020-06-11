@@ -1,0 +1,32 @@
+.alert-request-result {
+    margin-top: 20px;
+    background-color: #f8d7da;
+    border-radius: 0.3rem;
+}
+
+.alert-request-result .alert-header {
+    padding: 10px;
+}
+
+.alert-request-result .alert-title {
+    font-size: 2em;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px;
+}
+
+.alert-request-result .alert-title, .itens {
+    color: #d63031;
+    padding: 10px;
+}
+
+.alert-request-result .itens {
+    width: 94%;
+    border-top: 1px solid #ff7675;
+    list-style: disc;
+    margin-left: 30px;
+}
+
+.alert-request-result .item {
+    padding: 3px;
+}
