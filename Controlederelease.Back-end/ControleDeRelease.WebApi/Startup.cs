@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ControleDeRelease.Share.Converters;
 
 namespace ControleDeRelease.WebApi
 {
@@ -22,7 +23,11 @@ namespace ControleDeRelease.WebApi
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddMvc(option => option.EnableEndpointRouting = false);
             services.AddScoped<DataBaseContext, DataBaseContext>();
-            
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(new DateTimeConverter());
+            });
+
             services.AddCors(options => options.AddPolicy("AllowSpecificOrigin", builder =>
             {
                 builder.AllowAnyOrigin()

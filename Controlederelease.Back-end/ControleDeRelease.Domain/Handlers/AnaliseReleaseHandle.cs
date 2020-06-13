@@ -3,7 +3,9 @@ using ControleDeRelease.Domain.Commands.AnaliseRelease;
 using ControleDeRelease.Domain.Entities;
 using ControleDeRelease.Domain.Queries;
 using ControleDeRelease.Domain.Repository;
+using ControleDeRelease.Domain.VireModel;
 using Flunt.Notifications;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ControleDeRelease.Domain.Handlers
@@ -44,10 +46,25 @@ namespace ControleDeRelease.Domain.Handlers
             var liberacaoRelease = new LiberacaoRelease();
             liberacaoRelease.AnalisarReleases(versao, projetos);
 
-            if(liberacaoRelease.Notifications.Any())
+            if (liberacaoRelease.Notifications.Any())
                 return new CommandResult(false, "Não foi possivel analisar as releases", liberacaoRelease.Notifications);
 
-            return new CommandResult(true, liberacaoRelease.Items);
+            var itens = GetItensLiberacaoReleaseVireModel(liberacaoRelease.Items);
+
+            return new CommandResult(true, itens);
+        }
+
+        public List<ItemLiberacaoReleaseVireModel> GetItensLiberacaoReleaseVireModel(List<ItemLiberacaoRelease> itensLiberacaoReleases)
+        {
+            var itensLiberacaoReleaseVireModel = new List<ItemLiberacaoReleaseVireModel>();
+
+            foreach (var item in itensLiberacaoReleases)
+            {
+                var itemLiberacaoReleaseVireModel = new ItemLiberacaoReleaseVireModel().Parse(item);
+                itensLiberacaoReleaseVireModel.Add(itemLiberacaoReleaseVireModel);    
+            }
+
+            return itensLiberacaoReleaseVireModel;
         }
     }
 }

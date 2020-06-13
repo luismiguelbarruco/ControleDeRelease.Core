@@ -1,5 +1,5 @@
 ﻿using ControleDeRelease.Domain.Entities;
-using ControleDeRelease.Domain.Enums;
+using ControleDeRelease.Domain.Fake;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -8,23 +8,40 @@ namespace ControleDeRelease.Domain.Helpers
 {
     public static class FileInfoHelper
     {
-        public static AttributeFile GetAttributeFile(string path)
+        public static DadosVersao GetDataFileVersion(string path)
         {
             var fileInfo = new FileInfo(path);
             var fileVersionInfo = FileVersionInfo.GetVersionInfo(fileInfo.FullName);
 
-            var attributeFile = new AttributeFile
-            {
-                FileVersionInfo = fileVersionInfo
-                //obter data release
-            };
+            //obter data release
 
-            return attributeFile;
+            var versao = new Version(
+                fileVersionInfo.FileMajorPart,
+                fileVersionInfo.FileMinorPart,
+                fileVersionInfo.FileBuildPart,
+                fileVersionInfo.FilePrivatePart
+            );
+
+            var dadosVersao = new DadosVersao(versao.ToString(), DateTime.Now);
+
+            return dadosVersao;
         }
 
-        public static StatusRelease CompareVersion(Version fileVersionInfoRelease, Version fileVersionInfoTeste)
+        public static DadosVersaoFake GetDataFileVersionFake()
         {
-            return fileVersionInfoTeste > fileVersionInfoRelease ? StatusRelease.Atualizado : StatusRelease.Mantido;
+            var fileInfo = new FileInfo(@"C:\Program Files (x86)\WinRAR\WinRAR.exe");
+            var fileVersionInfo = FileVersionInfo.GetVersionInfo(fileInfo.FullName);
+
+            var versao = new Version(
+                fileVersionInfo.FileMajorPart,
+                fileVersionInfo.FileMinorPart,
+                fileVersionInfo.FileBuildPart,
+                fileVersionInfo.FilePrivatePart
+            );
+
+            var dadosVersao = new DadosVersaoFake(versao.ToString(), DateTime.Now);
+
+            return dadosVersao;
         }
     }
 }

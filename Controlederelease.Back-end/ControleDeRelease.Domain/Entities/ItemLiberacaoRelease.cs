@@ -1,23 +1,21 @@
 ﻿using ControleDeRelease.Domain.Enums;
-using ControleDeRelease.Domain.Extensions;
 using Flunt.Notifications;
+using System;
 using System.IO;
 
 namespace ControleDeRelease.Domain.Entities
 {
     public class ItemLiberacaoRelease : Notifiable
     {
-        public string Projeto { get; set; }
+        public Projeto Projeto { get; set; }
 
-        public AttributeFile AttributeFileRelease { get; set; }
+        public DadosVersao DadosVersaoRelease { get; set; }
 
-        public AttributeFile AttributeFileTeste { get; set; }
+        public DadosVersao DadosVersaoTeste { get; set; }
 
-        public StatusRelease StatusAtualizacao { get; private set; }
+        public StatusRelease StatusAtualizacao { get; private set; } = StatusRelease.NaoVerificado;
 
-        public string StatusAtualizacaoDescription => StatusAtualizacao.GetDescriptionAttribute();
-
-        public ItemLiberacaoRelease(string projeto) => Projeto = projeto;
+        public ItemLiberacaoRelease(Projeto projeto) => Projeto = projeto;
 
         public bool Validate(string path)
         {
@@ -30,9 +28,12 @@ namespace ControleDeRelease.Domain.Entities
             return true;
         }
 
-        public void SetStatusRelease(StatusRelease statusRelease)
+        public void SetStatusRelease()
         {
-            StatusAtualizacao = statusRelease;
+            Version fileVersionRelease = new Version(DadosVersaoRelease.Release);
+            Version fileVersionTeste = new Version(DadosVersaoTeste.Release);
+
+            StatusAtualizacao = fileVersionTeste > fileVersionRelease ? StatusRelease.Atualizado : StatusRelease.Mantido;
         }
     }
 }

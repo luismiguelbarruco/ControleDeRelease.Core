@@ -1,6 +1,5 @@
 ﻿using ControleDeRelease.Domain.Helpers;
 using Flunt.Notifications;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,42 +9,30 @@ namespace ControleDeRelease.Domain.Entities
     {
         public List<ItemLiberacaoRelease> Items { get; set; }
 
-        public LiberacaoRelease()
-        {
-            Items = new List<ItemLiberacaoRelease>();
-        }
+        public LiberacaoRelease() => Items = new List<ItemLiberacaoRelease>();
 
         public void AnalisarReleases(Versao versao, List<Projeto> projetos)
         {
-            projetos.ForEach(projeto =>
+            foreach (var projeto in projetos)
             {
-                Version releaseVersion = null;
-                Version testeVersion = null;
+                var itemLiberacaoRelease = new ItemLiberacaoRelease(projeto);
 
                 var pathRelease = $@"{versao.DiretorioRelease}\{projeto.Path}";
                 var pathTeste = $@"{versao.DiretorioTeste}\{projeto.Path}";
 
-                var itemLiberacaoRelease = new ItemLiberacaoRelease(projeto.Nome);
-
                 if (itemLiberacaoRelease.Validate(pathRelease))
-                {
-                    itemLiberacaoRelease.AttributeFileRelease = FileInfoHelper.GetAttributeFile(pathRelease);
-                    releaseVersion = itemLiberacaoRelease.AttributeFileRelease.Versao;
-                }
+                    itemLiberacaoRelease.DadosVersaoRelease = FileInfoHelper.GetDataFileVersion(pathRelease);
 
                 if (itemLiberacaoRelease.Validate(pathTeste))
-                {
-                    itemLiberacaoRelease.AttributeFileTeste = FileInfoHelper.GetAttributeFile(pathTeste);
-                    testeVersion = itemLiberacaoRelease.AttributeFileTeste.Versao;
-                }
+                    itemLiberacaoRelease.DadosVersaoTeste = FileInfoHelper.GetDataFileVersion(pathTeste);
 
                 if (!itemLiberacaoRelease.Notifications.Any())
-                    itemLiberacaoRelease.SetStatusRelease(FileInfoHelper.CompareVersion(releaseVersion, testeVersion));
+                    itemLiberacaoRelease.SetStatusRelease();
 
                 Items.Add(itemLiberacaoRelease);
 
                 AddNotifications(itemLiberacaoRelease.Notifications);
-            });
+            }
         }
     }
 }

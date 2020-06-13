@@ -38,8 +38,7 @@ const Home = () => {
                 return;
             }
             
-
-            setAnaliseReleases(response.data);
+            setAnaliseReleases(response.data.data);
         } catch (error) {
             console.log(error);
         }
@@ -51,8 +50,6 @@ const Home = () => {
     async function handleGetVersoesAsync() {
         try {
             const response = await api.get('versaoProjeto');
-
-            console.log(response);
 
             setVersoes(response.data.data);
         } catch (error) {
@@ -128,10 +125,13 @@ const Home = () => {
             </header>
 
             {(() => {
+                console.log(analiseReleases);
                 if(analiseReleases && analiseReleases.length > 0) {
-                    renderVersoesTable()
+                    return(
+                        renderVersoesTable()
+                    )
                 }
-            })}
+            })()}
 
             <Alert content={alertContent} isOpen={alertVisible} toggle={toggle}/>
             <PageLoader loading={loading}/>
