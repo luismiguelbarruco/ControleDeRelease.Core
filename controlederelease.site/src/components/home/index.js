@@ -52,6 +52,8 @@ const Home = () => {
         try {
             const response = await api.get('versaoProjeto');
 
+            console.log(response);
+
             setVersoes(response.data.data);
         } catch (error) {
             console.log(error);

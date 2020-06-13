@@ -8,15 +8,16 @@ namespace ControleDeRelease.Domain.Entities
     public class ItemLiberacaoRelease : Notifiable
     {
         public string Projeto { get; set; }
-        public AttributeFileRelease AttributeFileRelease { get; set; }
-        public AttributeFileTeste AttributeFileTeste { get; set; }
-        public StatusRelease StatusAtualizacao { get; set; }
+
+        public AttributeFile AttributeFileRelease { get; set; }
+
+        public AttributeFile AttributeFileTeste { get; set; }
+
+        public StatusRelease StatusAtualizacao { get; private set; }
+
         public string StatusAtualizacaoDescription => StatusAtualizacao.GetDescriptionAttribute();
 
-        public ItemLiberacaoRelease(string projeto)
-        {
-            Projeto = projeto;
-        }
+        public ItemLiberacaoRelease(string projeto) => Projeto = projeto;
 
         public bool Validate(string path)
         {
@@ -27,6 +28,11 @@ namespace ControleDeRelease.Domain.Entities
             }
 
             return true;
+        }
+
+        public void SetStatusRelease(StatusRelease statusRelease)
+        {
+            StatusAtualizacao = statusRelease;
         }
     }
 }

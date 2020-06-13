@@ -1,12 +1,9 @@
 ﻿using ControleDeRelease.Domain.Commands;
 using ControleDeRelease.Domain.Commands.AnaliseRelease;
 using ControleDeRelease.Domain.Entities;
-using ControleDeRelease.Domain.Helpers;
 using ControleDeRelease.Domain.Queries;
 using ControleDeRelease.Domain.Repository;
 using Flunt.Notifications;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace ControleDeRelease.Domain.Handlers
@@ -44,49 +41,13 @@ namespace ControleDeRelease.Domain.Handlers
             if(!projetos.Any())
                 return new CommandResult(false, "Nenhum projeto encontrado");
 
-            var liberacaoRelease = AnalisarReleases(versao, projetos);
+            var liberacaoRelease = new LiberacaoRelease();
+            liberacaoRelease.AnalisarReleases(versao, projetos);
 
             if(liberacaoRelease.Notifications.Any())
                 return new CommandResult(false, "Não foi possivel analisar as releases", liberacaoRelease.Notifications);
 
-            return new CommandResult(true, liberacaoRelease);
-        }
-
-        private LiberacaoRelease AnalisarReleases(Versao versao, List<Projeto> projetos)
-        {
-            var liberacaoRelease = new LiberacaoRelease();
-
-            projetos.ForEach(projeto =>
-            {
-                Version releaseVersion = null;
-                Version testeVersion = null;
-
-                var pathRelease = $@"{versao.DiretorioRelease}\{projeto.Path}";
-                var pathTeste = $@"{versao.DiretorioTeste}\{projeto.Path}";
-
-                var itemLiberacaoRelease = new ItemLiberacaoRelease(projeto.Nome);
-
-                if(itemLiberacaoRelease.Validate(pathRelease))
-                {
-                    itemLiberacaoRelease.AttributeFileRelease = (AttributeFileRelease)FileInfoHelper.GetAttributeFile(pathRelease);
-                    releaseVersion = itemLiberacaoRelease.AttributeFileRelease.Versao;
-                }
-
-                if (itemLiberacaoRelease.Validate(pathTeste))
-                {
-                    itemLiberacaoRelease.AttributeFileTeste = (AttributeFileTeste)FileInfoHelper.GetAttributeFile(pathTeste);
-                    testeVersion = itemLiberacaoRelease.AttributeFileTeste.Versao;
-                }
-
-                if(!itemLiberacaoRelease.Notifications.Any())
-                    itemLiberacaoRelease.StatusAtualizacao = FileInfoHelper.CompareVersion(releaseVersion, testeVersion);
-
-                liberacaoRelease.Items.Add(itemLiberacaoRelease);
-
-                liberacaoRelease.AddNotifications(itemLiberacaoRelease.Notifications);
-            });
-
-            return liberacaoRelease;
+            return new CommandResult(true, liberacaoRelease.Items);
         }
     }
 }

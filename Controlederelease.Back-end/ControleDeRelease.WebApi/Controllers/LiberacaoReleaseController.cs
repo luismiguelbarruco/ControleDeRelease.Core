@@ -37,10 +37,10 @@ namespace ControleDeRelease.WebApi.Controllers
             return result; 
         }
 
-        //[HttpPost]
-        //public ICommandResult Post()
-        //{
-        //    return new CommandResult();
-        //}
+        [HttpPost]
+        public ICommandResult Post()
+        {
+            return new CommandResult();
+        }
     }
 }

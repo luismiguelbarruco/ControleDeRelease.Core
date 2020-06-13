@@ -72,3 +72,4 @@ D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\Co
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.dll
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.pdb
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.genruntimeconfig.cache
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
