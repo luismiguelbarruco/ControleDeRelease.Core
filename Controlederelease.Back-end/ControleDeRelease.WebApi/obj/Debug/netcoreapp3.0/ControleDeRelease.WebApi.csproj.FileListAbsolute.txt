@@ -56,6 +56,7 @@ D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\Co
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\ControleDeRelease.WebApi.pdb
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\Flunt.dll
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\LiteDB.dll
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\ControleDeRelease.Domain.dll
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\ControleDeRelease.Share.dll
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\ControleDeRelease.Domain.pdb
@@ -72,4 +73,5 @@ D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\Co
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.dll
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.pdb
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.genruntimeconfig.cache
-D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\LiteDB.pdb
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\LiteDB.xml

@@ -7,13 +7,15 @@ namespace ControleDeRelease.Domain.Entities
 {
     public class ItemLiberacaoRelease : Notifiable
     {
-        public Projeto Projeto { get; set; }
+        public Projeto Projeto { get; private set; }
 
-        public DadosVersao DadosVersaoRelease { get; set; }
+        public ReleaseAttributes ReleaseAttriburesDiretorioRelese { get; set; }
 
-        public DadosVersao DadosVersaoTeste { get; set; }
+        public ReleaseAttributes ReleaseAttriburesDiretorioTeste { get; set; }
 
         public StatusRelease StatusAtualizacao { get; private set; } = StatusRelease.NaoVerificado;
+
+        public ItemLiberacaoRelease() { }
 
         public ItemLiberacaoRelease(Projeto projeto) => Projeto = projeto;
 
@@ -30,8 +32,8 @@ namespace ControleDeRelease.Domain.Entities
 
         public void SetStatusRelease()
         {
-            Version fileVersionRelease = new Version(DadosVersaoRelease.Release);
-            Version fileVersionTeste = new Version(DadosVersaoTeste.Release);
+            Version fileVersionRelease = new Version(ReleaseAttriburesDiretorioRelese.Release);
+            Version fileVersionTeste = new Version(ReleaseAttriburesDiretorioTeste.Release);
 
             StatusAtualizacao = fileVersionTeste > fileVersionRelease ? StatusRelease.Atualizado : StatusRelease.Mantido;
         }

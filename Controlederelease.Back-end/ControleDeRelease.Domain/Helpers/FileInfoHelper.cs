@@ -8,7 +8,7 @@ namespace ControleDeRelease.Domain.Helpers
 {
     public static class FileInfoHelper
     {
-        public static DadosVersao GetDataFileVersion(string path)
+        public static ReleaseAttributes GetDataFileVersion(string path)
         {
             var fileInfo = new FileInfo(path);
             var fileVersionInfo = FileVersionInfo.GetVersionInfo(fileInfo.FullName);
@@ -22,7 +22,7 @@ namespace ControleDeRelease.Domain.Helpers
                 fileVersionInfo.FilePrivatePart
             );
 
-            var dadosVersao = new DadosVersao(versao.ToString(), DateTime.Now);
+            var dadosVersao = new ReleaseAttributes(versao.ToString(), DateTime.Now);
 
             return dadosVersao;
         }

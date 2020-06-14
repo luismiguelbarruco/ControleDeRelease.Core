@@ -8,6 +8,7 @@ namespace ControleDeRelease.Domain.Data.UnitOfWork
         private readonly DataBaseContext _dataBaseContext;
         private IProjetoRepository _projetoRepository;
         private IVersaoProjetoRepository _diretorioProjetoRepository;
+        private ILiberacaoReleaseRepository _liberacaoReleaseRepository;
 
         public UnitOfWork(DataBaseContext dataBaseContext)
         {
@@ -31,12 +32,17 @@ namespace ControleDeRelease.Domain.Data.UnitOfWork
 
         public IProjetoRepository GetProjetoRepository()
         {
-            return _projetoRepository ?? (_projetoRepository = new ProjetoRepository(_dataBaseContext));
+            return _projetoRepository ??= new ProjetoRepository(_dataBaseContext);
         }
 
         public IVersaoProjetoRepository GetVersaoProjetoRepository()
         {
-            return _diretorioProjetoRepository ?? (_diretorioProjetoRepository = new VersaoProjetoRepository(_dataBaseContext));
+            return _diretorioProjetoRepository ??= new VersaoProjetoRepository(_dataBaseContext);
+        }
+
+        public ILiberacaoReleaseRepository GetLiberacaoReleaseRepository()
+        {
+            return _liberacaoReleaseRepository ??= new LiberacaoReleaseRepository(_dataBaseContext);
         }
     }
 }

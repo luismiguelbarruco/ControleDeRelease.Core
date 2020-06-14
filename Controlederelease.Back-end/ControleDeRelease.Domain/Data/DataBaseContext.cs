@@ -1,4 +1,5 @@
-﻿using LiteDB;
+﻿using ControleDeRelease.Domain.Entities;
+using LiteDB;
 using System;
 
 namespace ControleDeRelease.Domain.Data

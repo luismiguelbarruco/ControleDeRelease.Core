@@ -7,8 +7,8 @@ namespace ControleDeRelease.Domain.Repository
 {
     public interface IVersaoProjetoRepository
     {
-        bool Cadastrar(Versao diretorioProjeto);
-        bool Atualizar(Versao diretorioProjeto);
+        bool Cadastrar(Versao versao);
+        bool Atualizar(Versao versao);
         bool Deletar(int id);
         Versao Selecionar(Expression<Func<Versao, bool>> predicate);
         IEnumerable<Versao> Selecionar();

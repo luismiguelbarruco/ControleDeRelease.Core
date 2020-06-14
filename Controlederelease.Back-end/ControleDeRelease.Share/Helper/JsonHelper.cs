@@ -4,9 +4,9 @@ namespace ControleDeRelease.Share.Helper
 {
     public static class JsonHelper
     {
-        public static void Serialize(object obj)
+        public static string Serialize(object obj)
         {
-            JsonConvert.SerializeObject(obj);
+            return JsonConvert.SerializeObject(obj);
         }
 
         public static TEntity Deserialize<TEntity>(string value)

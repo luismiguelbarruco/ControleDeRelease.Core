@@ -7,6 +7,7 @@ namespace ControleDeRelease.Domain.Data.UnitOfWork
     {
         IProjetoRepository GetProjetoRepository();
         IVersaoProjetoRepository GetVersaoProjetoRepository();
+        ILiberacaoReleaseRepository GetLiberacaoReleaseRepository();
         void Commit();
     }
 }

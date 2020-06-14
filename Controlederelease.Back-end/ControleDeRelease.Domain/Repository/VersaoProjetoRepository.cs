@@ -20,11 +20,11 @@ namespace ControleDeRelease.Domain.Repository
             _versaoProjetoCollection = _dataBaseContext.GetCollection<Versao>();
         }
 
-        public bool Atualizar(Versao versaoProjeto)
+        public bool Atualizar(Versao versao)
         {
             try
             {
-                _versaoProjetoCollection.Update(versaoProjeto);
+                _versaoProjetoCollection.Update(versao);
 
                 return true;
             }
@@ -35,11 +35,11 @@ namespace ControleDeRelease.Domain.Repository
             }
         }
 
-        public bool Cadastrar(Versao versaoProjeto)
+        public bool Cadastrar(Versao versao)
         {
             try
             {
-                var result = _versaoProjetoCollection.Insert(versaoProjeto);
+                var result = _versaoProjetoCollection.Insert(versao);
 
                 return true;
             }

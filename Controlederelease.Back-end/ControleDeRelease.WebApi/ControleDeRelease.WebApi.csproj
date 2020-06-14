@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ControleDeRelease.Domain\ControleDeRelease.Domain.csproj" />
+    <ProjectReference Include="..\ControleDeRelease.Share\ControleDeRelease.Share.csproj" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">

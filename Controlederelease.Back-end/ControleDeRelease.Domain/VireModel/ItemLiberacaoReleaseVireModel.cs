@@ -7,13 +7,19 @@ namespace ControleDeRelease.Domain.VireModel
 {
     public class ItemLiberacaoReleaseVireModel
     {
-        public int Id { get; private set; }
-        public string Projeto { get; private set; }
-        public string VersaoRelease { get; private set; }
-        public DateTime DataVersaoRelease { get; private set; }
-        public string VersaoTeste { get; private set; }
-        public DateTime DataVersaoTeste { get; private set; }
-        public string Status { get; private set; }
+        public int Id { get; set; }
+
+        public string Projeto { get; set; }
+
+        public string VersaoRelease { get; set; }
+
+        public DateTime DataVersaoRelease { get; set; }
+
+        public string VersaoTeste { get; set; }
+
+        public DateTime DataVersaoTeste { get; set; }
+
+        public string Status { get; set; }
 
         public ItemLiberacaoReleaseVireModel Parse(ItemLiberacaoRelease itemLiberacaoRelease)
         {
@@ -21,10 +27,10 @@ namespace ControleDeRelease.Domain.VireModel
             {
                 Id = itemLiberacaoRelease.Projeto.Id,
                 Projeto = itemLiberacaoRelease.Projeto.Nome,
-                VersaoRelease = itemLiberacaoRelease.DadosVersaoRelease.Release,
-                DataVersaoRelease = itemLiberacaoRelease.DadosVersaoRelease.DataVersao,
-                VersaoTeste = itemLiberacaoRelease.DadosVersaoTeste.Release,
-                DataVersaoTeste = itemLiberacaoRelease.DadosVersaoRelease.DataVersao,
+                VersaoRelease = itemLiberacaoRelease.ReleaseAttriburesDiretorioRelese.Release,
+                DataVersaoRelease = itemLiberacaoRelease.ReleaseAttriburesDiretorioRelese.DataVersao,
+                VersaoTeste = itemLiberacaoRelease.ReleaseAttriburesDiretorioTeste.Release,
+                DataVersaoTeste = itemLiberacaoRelease.ReleaseAttriburesDiretorioTeste.DataVersao,
                 Status = itemLiberacaoRelease.StatusAtualizacao.GetDescriptionAttribute()
             };
         }

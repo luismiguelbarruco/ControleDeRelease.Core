@@ -29,8 +29,9 @@ namespace ControleDeRelease.WebApi.Controllers
 
             var versaoRepository = unitOfWork.GetVersaoProjetoRepository();
             var projetoRepository = unitOfWork.GetProjetoRepository();
+            var liberacaoReleaseRepository = unitOfWork.GetLiberacaoReleaseRepository();
 
-            var handle = new AnaliseReleaseHandle(versaoRepository, projetoRepository);
+            var handle = new AnaliseReleaseHandle(versaoRepository, projetoRepository, liberacaoReleaseRepository);
 
             var result = handle.Handler(command);
 
@@ -38,8 +39,20 @@ namespace ControleDeRelease.WebApi.Controllers
         }
 
         [HttpPost]
-        public ICommandResult Post()
+        public ICommandResult Post([FromBody] InserirLiberacaoReleaseCommand command)
         {
+            var unitOfWork = new UnitOfWork(_dataBaseContext);
+
+            var versaoRepository = unitOfWork.GetVersaoProjetoRepository();
+            var projetoRepository = unitOfWork.GetProjetoRepository();
+            var liberacaoReleaseRepository = unitOfWork.GetLiberacaoReleaseRepository();
+
+            var handle = new AnaliseReleaseHandle(versaoRepository, projetoRepository, liberacaoReleaseRepository);
+
+            var result = handle.Handler(command);
+
+            unitOfWork.Commit();
+
             return new CommandResult();
         }
     }

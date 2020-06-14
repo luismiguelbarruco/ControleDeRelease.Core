@@ -14,7 +14,7 @@ namespace ControleDeRelease.Share.Converters
 
         public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options)
         {
-            writer.WriteStringValue(value.ToLocalTime().ToString("dd-MM-yyyy - HH:mm:ss"));
+            writer.WriteStringValue(value.ToLocalTime().ToString("dd-MM-yyyy HH:mm:ss"));
         }
     }
 }

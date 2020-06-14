@@ -22,9 +22,42 @@ const Home = () => {
         setAlertVisible(!alertVisible);
     }
 
+    function getLiberacaoReleases() {
+        const $selectElemt = document.getElementById('versao');
+        const id = $selectElemt.options[$selectElemt.selectedIndex].value;
+        const versao = versoes.find(element => element.id === Number(id));
+
+        return {
+            versao,
+            itens: analiseReleases
+        };
+    }
+
+    async function handlePostAnaliseRelease() {
+        try {
+        
+            const liberacaoReleases = getLiberacaoReleases();
+
+            console.log(liberacaoReleases);
+
+            const response = await api.post('liberacaoRelease', liberacaoReleases);
+
+            console.log(response);
+
+            if(!response.data.sucess) {
+                setAlertContent(response.data);
+                return;
+            }
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     async function handleGetAnaliseAsync() {
         try {
             
+            setAnaliseReleases([]);
             const $selectElemt = document.getElementById('versao');
             const id = $selectElemt.options[$selectElemt.selectedIndex].value;
 
@@ -59,13 +92,13 @@ const Home = () => {
 
     function getDate() {
         const today = new Date();
-        const date = `${today.getDate()}/${(today.getMonth()+1)}/${today.getFullYear()}`;
+        const date = `${today.getDate()}/${(today.getMonth() + 1)}/${today.getFullYear()}`;
         return date;
     }
 
     function renderVersoesOption() {
         return (
-            <select className="selectVersoes" id="versao">
+            <select className="selectVersoes" id="versao" onChange={() => setAnaliseReleases([])}>
                 {versoes.map(versao => <option key={versao.id} value={versao.id} onClick={() =>console.log('')}>{versao.nome}</option>)}
             </select>
         )
@@ -117,7 +150,10 @@ const Home = () => {
                         return (
                             <React.Fragment>
                                 {renderVersoesOption()}
-                                <Link to="./" className="button-analize" onClick={handleGetAnaliseAsync}>Analisar</Link>
+                                <button className="button" onClick={handleGetAnaliseAsync}>Analisar</button>
+                                <button className="button button-primary" onClick={handlePostAnaliseRelease}>Salvar</button>
+                                {/* <Link to="./" className="button-analize" onClick={handleGetAnaliseAsync}>Analisar</Link>
+                                <Link to="./" className="button-analize button-primary">Salvar</Link> */}
                             </React.Fragment>
                         )
                     }
@@ -125,11 +161,8 @@ const Home = () => {
             </header>
 
             {(() => {
-                console.log(analiseReleases);
                 if(analiseReleases && analiseReleases.length > 0) {
-                    return(
-                        renderVersoesTable()
-                    )
+                    return renderVersoesTable()
                 }
             })()}
 
