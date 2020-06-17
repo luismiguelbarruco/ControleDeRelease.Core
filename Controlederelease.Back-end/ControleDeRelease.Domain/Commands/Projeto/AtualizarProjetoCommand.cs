@@ -1,5 +1,7 @@
 ﻿
+using ControleDeRelease.Domain.Entities;
 using Flunt.Validations;
+using System.Collections.Generic;
 
 namespace ControleDeRelease.Domain.Commands.Projeto
 {
@@ -8,6 +10,7 @@ namespace ControleDeRelease.Domain.Commands.Projeto
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Subpasta { get; set; }
+        public List<Versao> Versoes { get; set; }
 
         public override void Validate()
         {

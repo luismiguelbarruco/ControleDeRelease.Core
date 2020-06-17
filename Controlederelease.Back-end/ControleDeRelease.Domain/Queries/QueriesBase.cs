@@ -10,5 +10,7 @@ namespace ControleDeRelease.Domain.Queries
         public static Expression<Func<TEntity, bool>> Selecionar(string projeto) => p => p.Nome == projeto;
 
         public static Expression<Func<TEntity, bool>> Selecionar(int id) => p => p.Id == id;
+
+        public static Expression<Func<TEntity, bool>> Selecionar(int id, string nome) => p => p.Id != id && p.Nome == nome;
     }
 }

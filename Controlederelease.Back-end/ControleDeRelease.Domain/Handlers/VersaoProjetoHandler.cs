@@ -5,6 +5,8 @@ using ControleDeRelease.Domain.Entities;
 using ControleDeRelease.Domain.Queries;
 using ControleDeRelease.Domain.Repository;
 using Flunt.Notifications;
+using System;
+using System.Linq.Expressions;
 
 namespace ControleDeRelease.Domain.Handlers
 {
@@ -61,7 +63,7 @@ namespace ControleDeRelease.Domain.Handlers
             if (result == null)
                 return new CommandResult(false, "Projeto não encontrado.");
 
-            query = VersaoQueries.Selecionar(command.Nome);
+            query = VersaoQueries.Selecionar(command.Id, command.Nome);
 
             result = _versaoProjetoRepository.Selecionar(query);
 

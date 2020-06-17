@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-
+﻿
 namespace ControleDeRelease.Domain.Entities
 {
     public class Versao : EntityBase

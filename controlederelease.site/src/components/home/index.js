@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PageLoader from '../PageLoader/PageLoader';
 import Alert from '../Alert';
-import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 import './style.css';

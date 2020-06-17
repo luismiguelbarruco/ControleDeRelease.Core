@@ -33,7 +33,8 @@ namespace ControleDeRelease.Domain.Handlers
             var projeto = new Projeto
             {
                 Nome = command.Nome,
-                Subpasta = command.Subpasta
+                Subpasta = command.Subpasta,
+                Versoes = command.Versoes
             };
 
             if(!_projetoRepository.Cadastrar(projeto))
@@ -59,11 +60,19 @@ namespace ControleDeRelease.Domain.Handlers
             if (result == null)
                 return new CommandResult(false, "Projeto não encontrado.");
 
+            query = ProjetoQueries.Selecionar(command.Id, command.Nome);
+
+            result = _projetoRepository.Selecionar(query);
+
+            if(result != null)
+                return new CommandResult(false, "Já existe um projeto com mesmo nome cadastrado.");
+
             var projeto = new Projeto
             {
                 Id = command.Id,
                 Nome = command.Nome,
-                Subpasta = command.Subpasta
+                Subpasta = command.Subpasta,
+                Versoes = command.Versoes
             };
 
             if (!_projetoRepository.Atualizar(projeto))

@@ -12,10 +12,13 @@ const Projetos = () => {
     const [subpasta, setSubpasta] = useState('');
     const [operation, setOperation] = useState(1);
     const [projetos, setProjetos] = useState([]);
+    const [versoes, setVersoes] = useState([]);
     const [alertVisible, setAlertVisible] = useState(false);
     const [alertContent, setAlertContent] = useState({});
+    const [versoesSelected, setVersoesSelected] = useState([]);
 
     useEffect(() => {
+        handleGetProjetosAsync();
         handleGetVersoesAsync();
     }, []);
 
@@ -23,7 +26,7 @@ const Projetos = () => {
         setAlertVisible(!alertVisible);
     }
 
-    async function handleGetVersoesAsync() {
+    async function handleGetProjetosAsync() {
         try {
             const response = await api.get('projeto');
 
@@ -37,16 +40,50 @@ const Projetos = () => {
         }
     }
 
+    async function handleGetVersoesAsync() {
+        try {
+            const response = await api.get('versaoProjeto');
+
+            if(response.data.sucess !== true) {
+                return;
+            };
+
+            setVersoes(response.data.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    function handleSetVersoes(versao) {
+        const index = versoesSelected
+            ? versoesSelected.findIndex(v => v.id === versao.id)
+            : -1;
+
+        if(!versoesSelected) {
+            setVersoesSelected([versao]);
+            return;
+        }
+
+        if(index < 0) {
+            setVersoesSelected([...versoesSelected, versao]);
+        } else {
+            const versoes = versoesSelected.filter(v => v.id !== versao.id);
+            setVersoesSelected(versoes);
+        }
+    }
+
     function carregarDadosProjeto(projeto) {
         setId(projeto.id);
         setNome(projeto.nome);
         setSubpasta(projeto.subpasta);
+        setVersoesSelected(projeto.versoes);
     }
 
     function setProjetoIni() {
         setId(0);
         setNome('');
         setSubpasta('');
+        setVersoesSelected([]);
     }
 
     function cancelUpdate(event) {
@@ -67,17 +104,15 @@ const Projetos = () => {
     function toogleModal(show) {
         const $modal = document.getElementById('modal');
         $modal.style.display = show ? 'block' : 'none';
-
-        if(!show) setProjetoIni();        
     }
 
     async function handleDeleteProjectAsync() {
         try {
             const response = await api.delete(`projeto/${id}`);
             
-            handleGetVersoesAsync();
+            handleGetProjetosAsync();
         } catch (error) {
-             console.log(error);
+            console.log(error);
         }
 
         toogleModal(false);
@@ -88,7 +123,11 @@ const Projetos = () => {
         try {
             const method = id ? 'put' : 'post';
             const params = id ? `/${id}` : '';
-            let projeto = { nome, subpasta }
+            let projeto = { 
+                nome, 
+                subpasta,
+                versoes: versoesSelected
+            }
 
             if(id) projeto = { ...projeto, id };
 
@@ -101,7 +140,7 @@ const Projetos = () => {
                 return;
             }
             
-            handleGetVersoesAsync();
+            handleGetProjetosAsync();
         } catch (error) {
             console.log(error)
         }
@@ -118,6 +157,7 @@ const Projetos = () => {
                         <th scope="col">Id</th>
                         <th scope="col">Projeto</th>
                         <th scope="col">Subpasta</th>
+                        <th scope="col">Versões</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
@@ -128,6 +168,16 @@ const Projetos = () => {
         )
     }
 
+    function renderVersoes(versoes) {
+        if(versoes) {
+            return versoes.reduce((current, versao) => {
+                return current !== '' 
+                    ? current = `${current}, ${versao.nome}`
+                    : versao.nome;
+            }, '');
+        }
+    }
+
     function renderRowsTableProjects() {
         return projetos.map(projeto => {
             return (
@@ -135,6 +185,7 @@ const Projetos = () => {
                     <th scope="row">{projeto.id}</th>
                     <td>{projeto.nome}</td>
                     <td>{projeto.subpasta}</td>
+                    <td>{renderVersoes(projeto.versoes)}</td>
                     <th>
                         <button className="button-edit" onClick={() => carregarDadosProjeto(projeto)}>
                             <i className="material-icons">&#xE254;</i>
@@ -200,6 +251,18 @@ const Projetos = () => {
                         onChange={e => 
                         setSubpasta(e.target.value) } 
                     />
+                </div>
+                <div className="controls">
+                    {versoes.map((versao, index) => (
+                        <label htmlFor="aligned-cb" className="checkbox" key={versao.id}>
+                            <input 
+                                type="checkbox" 
+                                checked={versoesSelected && versoesSelected.some(v => v.id === versao.id) ? true : false}
+                                onChange={() => handleSetVersoes(versao)}
+                            />
+                                {versao.nome}
+                        </label>
+                    ))}
                 </div>
                 <div className="controls">
                     <button type="submit" className="button button-primary" onClick={e => {

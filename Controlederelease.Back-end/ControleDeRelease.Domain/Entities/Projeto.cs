@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace ControleDeRelease.Domain.Entities
 {
     public class Projeto : EntityBase
@@ -27,5 +29,7 @@ namespace ControleDeRelease.Domain.Entities
                     return $@"{Subpasta}\{Nome}";
             }
         }
+
+        public List<Versao> Versoes { get; set; }
     }
 }

@@ -39,9 +39,9 @@ namespace ControleDeRelease.WebApi.Controllers
         {
             using var unitOfWork = new UnitOfWork(_dataBaseContext);
 
-            var query = ProjetoQueries.Selecionar(id);
-
             var projetoRepository = unitOfWork.GetProjetoRepository();
+            
+            var query = ProjetoQueries.Selecionar(id);
 
             var projeto = projetoRepository.Selecionar(query);
 
