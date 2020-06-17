@@ -39,7 +39,7 @@ const Projetos = () => {
             console.log(error);
         }
     }
-
+    
     async function handleGetVersoesAsync() {
         try {
             const response = await api.get('versaoProjeto');
