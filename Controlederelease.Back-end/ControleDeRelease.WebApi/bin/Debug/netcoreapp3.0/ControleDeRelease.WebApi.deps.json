@@ -328,6 +328,17 @@
           "lib/netstandard2.0/Flunt.dll": {}
         }
       },
+      "LiteDB/5.0.8": {
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "assemblyVersion": "5.0.8.0",
+            "fileVersion": "5.0.8.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/LiteDB.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -343,7 +354,7 @@
         "dependencies": {
           "ControleDeRelease.Share": "1.0.0",
           "Flunt": "1.0.4",
-          "LiteDB": "5.0.4"
+          "LiteDB": "5.0.8"
         },
         "runtime": {
           "ControleDeRelease.Domain.dll": {}
@@ -361,14 +372,6 @@
         },
         "compile": {
           "ControleDeRelease.Share.dll": {}
-        }
-      },
-      "LiteDB/5.0.4": {
-        "runtime": {
-          "LiteDB.dll": {}
-        },
-        "compile": {
-          "LiteDB.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.0.0.0": {
@@ -2078,6 +2081,13 @@
       "path": "flunt/1.0.4",
       "hashPath": "flunt.1.0.4.nupkg.sha512"
     },
+    "LiteDB/5.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lqwQnweoa3Lko87uo9FzZYf6BFh3AULas5yosG95LPVHIoACtJJ2BjBPQ7d7vUYDQYSV3rUco2+vMilVoBQ3WA==",
+      "path": "litedb/5.0.8",
+      "hashPath": "litedb.5.0.8.nupkg.sha512"
+    },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
@@ -2091,11 +2101,6 @@
       "sha512": ""
     },
     "ControleDeRelease.Share/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "LiteDB/5.0.4": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

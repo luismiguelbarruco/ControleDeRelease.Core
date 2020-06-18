@@ -15,3 +15,12 @@ D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\Co
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.csproj.CoreCompileInputs.cache
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.dll
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.pdb
+D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\bin\Debug\netcoreapp3.0\ControleDeRelease.Share.deps.json
+D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\bin\Debug\netcoreapp3.0\ControleDeRelease.Share.dll
+D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\bin\Debug\netcoreapp3.0\ControleDeRelease.Share.pdb
+D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.csprojAssemblyReference.cache
+D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.AssemblyInfoInputs.cache
+D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.AssemblyInfo.cs
+D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.csproj.CoreCompileInputs.cache
+D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.dll
+D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Share\obj\Debug\netcoreapp3.0\ControleDeRelease.Share.pdb

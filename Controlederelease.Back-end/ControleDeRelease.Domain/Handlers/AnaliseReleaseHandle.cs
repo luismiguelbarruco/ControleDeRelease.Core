@@ -52,12 +52,12 @@ namespace ControleDeRelease.Domain.Handlers
                 return new CommandResult(false, "Nenhum projeto encontrado");
 
             var releaseAnalizer = new ReleaseAnalizer(versao, projetos);
-            var analizerResult = releaseAnalizer.Run();
+            var analizerResult = releaseAnalizer.RunAsync();
 
             if (releaseAnalizer.Notifications.Any())
                 return new CommandResult(false, "Não foi possivel analisar as releases", releaseAnalizer.Notifications);
 
-            var itens = GetItensLiberacaoReleaseVireModel(analizerResult);
+            var itens = GetItensLiberacaoReleaseVireModel(analizerResult.Result);
 
             return new CommandResult(true, itens);
         }

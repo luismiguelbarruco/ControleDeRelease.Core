@@ -18,40 +18,46 @@ namespace ControleDeRelease.Domain.Entities
             Projetos = projetos;
         }
 
-        public List<ItemLiberacaoRelease> Run()
+        public async Task<List<ItemLiberacaoRelease>> RunAsync()
         {
+            var tasks = new List<Task>();
             var itens = new List<ItemLiberacaoRelease>();
 
             //addionar tramanento de excessão
             foreach (var projeto in Projetos)
             {
-                var task = Task.Factory.StartNew(() =>
+                tasks.Add(Task.Run(() =>
                 {
-                    var itemLiberacaoRelease = new ItemLiberacaoRelease(projeto);
-
-                    var pathRelease = $@"{Versao.DiretorioRelease}\{projeto.Path}";
-                    var pathTeste = $@"{Versao.DiretorioTeste}\{projeto.Path}";
-
-                    if (itemLiberacaoRelease.Validate(@"C:\Program Files (x86)\WinRAR\WinRAR.exe"))
-                        itemLiberacaoRelease.ReleaseAttriburesDiretorioRelese = FileInfoHelper.GetDataFileVersion(@"C:\Program Files (x86)\WinRAR\WinRAR.exe");
-
-                    if (itemLiberacaoRelease.Validate(@"C:\Program Files (x86)\WinRAR\WinRAR.exe"))
-                        itemLiberacaoRelease.ReleaseAttriburesDiretorioTeste = FileInfoHelper.GetDataFileVersion(@"C:\Program Files (x86)\WinRAR\WinRAR.exe");
-
-                    if (!itemLiberacaoRelease.Notifications.Any())
-                        itemLiberacaoRelease.SetStatusRelease();
+                    var itemLiberacaoRelease = AnalisarItemLiberacaoRelease(projeto);
 
                     itens.Add(itemLiberacaoRelease);
 
                     AddNotifications(itemLiberacaoRelease.Notifications);
-                });
-
-                task.Wait();
+                }));
             }
+
+            await Task.WhenAll(tasks);
 
             return itens;
         }
 
+        private ItemLiberacaoRelease AnalisarItemLiberacaoRelease(Projeto projeto)
+        {
+            var itemLiberacaoRelease = new ItemLiberacaoRelease(projeto);
 
+            var pathRelease = $@"{Versao.DiretorioRelease}\{projeto.Path}";
+            var pathTeste = $@"{Versao.DiretorioTeste}\{projeto.Path}";
+
+            if (itemLiberacaoRelease.Validate(pathRelease))
+                itemLiberacaoRelease.ReleaseAttriburesDiretorioRelese = FileInfoHelper.GetDataFileVersion(pathRelease);
+
+            if (itemLiberacaoRelease.Validate(pathTeste))
+                itemLiberacaoRelease.ReleaseAttriburesDiretorioTeste = FileInfoHelper.GetDataFileVersion(pathTeste);
+
+            if (!itemLiberacaoRelease.Notifications.Any())
+                itemLiberacaoRelease.SetStatusRelease();
+
+            return itemLiberacaoRelease;
+        }
     }
 }

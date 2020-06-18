@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\LiteDB-master\LiteDB-master\LiteDB\LiteDB.csproj" />
     <ProjectReference Include="..\ControleDeRelease.Share\ControleDeRelease.Share.csproj" />
   </ItemGroup>
 
