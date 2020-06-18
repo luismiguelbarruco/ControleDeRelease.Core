@@ -140,6 +140,7 @@ body {
     border: none;
     background: none;
 }
+
 .button-delete {
     color: #dc3545;
     border: none;
@@ -218,7 +219,12 @@ a.button-danger {
 }
 
 .mg-checkbox {
-    margin-left: 8px;
+    margin-top: -6px;
+}
+
+.mg-label-checkbox {
+    margin-left: 6px;
+    margin-right: 14px;
 }
 
 .separator-top {

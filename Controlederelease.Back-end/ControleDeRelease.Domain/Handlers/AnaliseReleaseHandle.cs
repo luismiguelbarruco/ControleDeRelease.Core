@@ -46,7 +46,7 @@ namespace ControleDeRelease.Domain.Handlers
             if (versao == null)
                 return new CommandResult(false, $"Versão não encontrada");
 
-            var projetos = _projetoRepository.Selecionar().ToList();
+            var projetos = _projetoRepository.Selecionar(versao).ToList();
 
             if(!projetos.Any())
                 return new CommandResult(false, "Nenhum projeto encontrado");

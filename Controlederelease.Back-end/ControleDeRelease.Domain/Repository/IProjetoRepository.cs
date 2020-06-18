@@ -11,6 +11,7 @@ namespace ControleDeRelease.Domain.Repository
         bool Atualizar(Projeto projeto);
         bool Deletar(int id);
         Projeto Selecionar(Expression<Func<Projeto, bool>> predicate);
+        IEnumerable<Projeto> Selecionar(Versao versao);
         IEnumerable<Projeto> Selecionar();
     }
 }

@@ -252,15 +252,16 @@ const Projetos = () => {
                         setSubpasta(e.target.value) } 
                     />
                 </div>
-                <div className="controls">
-                    {versoes.map((versao, index) => (
-                        <label htmlFor="aligned-cb" className="checkbox" key={versao.id}>
+                <div className="controls controls-checkbox">
+                    {versoes.map(versao => (
+                        <label className="checkbox" key={versao.id}>
                             <input 
-                                type="checkbox" 
+                                type="checkbox"
+                                className="mg-checkbox"
                                 checked={versoesSelected && versoesSelected.some(v => v.id === versao.id) ? true : false}
                                 onChange={() => handleSetVersoes(versao)}
                             />
-                                {versao.nome}
+                                <span className="mg-label-checkbox">{versao.nome}</span>
                         </label>
                     ))}
                 </div>

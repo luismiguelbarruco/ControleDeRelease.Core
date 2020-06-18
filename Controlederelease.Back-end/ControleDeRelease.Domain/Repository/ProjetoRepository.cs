@@ -77,6 +77,22 @@ namespace ControleDeRelease.Domain.Repository
             }
         }
 
+        public IEnumerable<Projeto> Selecionar(Versao versao)
+        {
+            //Revisar log
+            try
+            {
+                var projetos = _projetoCollection.FindAll().Where(p => p.Versoes.Any(v => v.Id == versao.Id));
+
+                return projetos;
+            }
+            catch (Exception ex)
+            {
+                LogDeErros.Default.Gravar(ex, "Erro ao selecionar projeto");
+                return null;
+            }
+        }
+
         public Projeto Selecionar(Expression<Func<Projeto, bool>> predicate)
         {
             //Revisar log

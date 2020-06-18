@@ -14,7 +14,7 @@ namespace ControleDeRelease.Domain.Commands.Projeto
         {
             AddNotifications(new Contract()
                 .IsNotNullOrEmpty(Nome, nameof(Nome), "Nome do projeto não pode ser vazio")
-                //contrato personalisado
+                .AreNotEquals(0, Versoes.Count, nameof(Versoes), "Nenhuma versão informada para o projeto")
             );
         }
     }

@@ -17,6 +17,7 @@ namespace ControleDeRelease.Domain.Commands.Projeto
             AddNotifications(new Contract()
                 .AreNotEquals(0, Id, nameof(Id), "Informe um id válido")
                 .IsNotNullOrEmpty(Nome, nameof(Nome), "Nome do projeto não pode ser vazio")
+                .AreNotEquals(0, Versoes.Count, nameof(Versoes), "Nenhuma versão informada para o projeto")
             );
         }
     }

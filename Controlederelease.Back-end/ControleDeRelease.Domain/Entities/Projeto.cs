@@ -30,6 +30,6 @@ namespace ControleDeRelease.Domain.Entities
             }
         }
 
-        public List<Versao> Versoes { get; set; }
+        public List<Versao> Versoes { get; set; } = new List<Versao>();
     }
 }
