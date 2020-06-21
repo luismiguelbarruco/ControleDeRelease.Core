@@ -1,11 +1,10 @@
-﻿
-using ControleDeRelease.Domain.Entities;
+﻿using ControleDeRelease.Domain.Entities;
 using ControleDeRelease.Domain.Extensions;
 using System;
 
 namespace ControleDeRelease.Domain.VireModel
 {
-    public class ItemLiberacaoReleaseVireModel
+    public class ItemLiberacaoReleaseViewModel
     {
         public int Id { get; set; }
 
@@ -21,9 +20,9 @@ namespace ControleDeRelease.Domain.VireModel
 
         public string Status { get; set; }
 
-        public ItemLiberacaoReleaseVireModel Parse(ItemLiberacaoRelease itemLiberacaoRelease)
+        public ItemLiberacaoReleaseViewModel Parse(ItemLiberacaoRelease itemLiberacaoRelease)
         {
-            return new ItemLiberacaoReleaseVireModel
+            return new ItemLiberacaoReleaseViewModel
             {
                 Id = itemLiberacaoRelease.Projeto.Id,
                 Projeto = itemLiberacaoRelease.Projeto.Nome,

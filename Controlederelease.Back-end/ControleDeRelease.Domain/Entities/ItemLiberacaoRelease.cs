@@ -1,4 +1,6 @@
 ﻿using ControleDeRelease.Domain.Enums;
+using ControleDeRelease.Domain.Extensions;
+using ControleDeRelease.Domain.VireModel;
 using Flunt.Notifications;
 using System;
 using System.IO;
@@ -23,7 +25,7 @@ namespace ControleDeRelease.Domain.Entities
         {
             if (!File.Exists(path))
             {
-                AddNotification(nameof(Projeto), $"Arquivo {Projeto} não encontrado na pasta: {path}");
+                AddNotification(nameof(Projeto), $"Arquivo {Projeto.Nome} não encontrado na pasta: {path}");
                 return false;
             }
 
@@ -35,7 +37,43 @@ namespace ControleDeRelease.Domain.Entities
             Version fileVersionRelease = new Version(ReleaseAttriburesDiretorioRelese.Release);
             Version fileVersionTeste = new Version(ReleaseAttriburesDiretorioTeste.Release);
 
-            StatusAtualizacao = fileVersionTeste > fileVersionRelease ? StatusRelease.Atualizado : StatusRelease.Mantido;
+            if (fileVersionTeste > fileVersionRelease)
+                StatusAtualizacao = StatusRelease.Atualizado;
+
+            else if (fileVersionTeste == fileVersionRelease 
+                && ReleaseAttriburesDiretorioTeste.DataVersao > ReleaseAttriburesDiretorioRelese.DataVersao)
+                StatusAtualizacao = StatusRelease.Atualizado;
+
+            else
+                StatusAtualizacao = StatusRelease.Mantido;
+        }
+
+        public ItemLiberacaoRelease Parse(ItemLiberacaoReleaseViewModel itemLiberacaoReleaseVireModel)
+        {
+            var projeto = new Projeto
+            {
+                Id = itemLiberacaoReleaseVireModel.Id,
+                Nome = itemLiberacaoReleaseVireModel.Projeto
+            };
+
+            var releaseAttriburesDiretorioRelese = new ReleaseAttributes(
+                itemLiberacaoReleaseVireModel.VersaoRelease, 
+                itemLiberacaoReleaseVireModel.DataVersaoRelease
+            );
+
+            var releaseAttriburesDiretorioTeste = new ReleaseAttributes(
+                itemLiberacaoReleaseVireModel.VersaoTeste,
+                itemLiberacaoReleaseVireModel.DataVersaoTeste
+            );
+
+            var item = new ItemLiberacaoRelease(projeto)
+            {
+                ReleaseAttriburesDiretorioRelese = releaseAttriburesDiretorioRelese,
+                ReleaseAttriburesDiretorioTeste = releaseAttriburesDiretorioTeste,
+                StatusAtualizacao = itemLiberacaoReleaseVireModel.Status.GetValueFromDescription<StatusRelease>()
+            };
+
+            return item;
         }
     }
 }

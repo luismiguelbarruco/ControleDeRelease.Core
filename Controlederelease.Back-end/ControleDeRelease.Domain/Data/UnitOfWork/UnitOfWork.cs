@@ -1,5 +1,4 @@
-﻿
-using ControleDeRelease.Domain.Repository;
+﻿using ControleDeRelease.Domain.Repository;
 
 namespace ControleDeRelease.Domain.Data.UnitOfWork
 {

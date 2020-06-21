@@ -3,6 +3,8 @@ using ControleDeRelease.Domain.Entities;
 using ControleDeRelease.Share.Log;
 using LiteDB;
 using System;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace ControleDeRelease.Domain.Repository
 {
@@ -29,6 +31,21 @@ namespace ControleDeRelease.Domain.Repository
             {
                 LogDeErros.Default.Gravar(ex, "Erro ao cadastrar os dados liberação de release");
                 return false;
+            }
+        }
+
+        public LiberacaoRelease Seleionar(Expression<Func<LiberacaoRelease, bool>> predicate)
+        {
+            try
+            {
+                var result = _liberacaoReleaseCollection.Find(predicate).LastOrDefault();
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogDeErros.Default.Gravar(ex, "Erro ao cadastrar os dados liberação de release");
+                return null;
             }
         }
     }

@@ -1,6 +1,22 @@
-.alert-request-result {
-    margin-top: 20px;
+.sucess {
+    background-color: #d1ecf1;
+    border-top: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+.error {
     background-color: #f8d7da;
+    border-top: 1px solid #f5c6cb;
+    color: #d63031;
+}
+
+.alert-request-result {
+    width: 94%;
+    /* border-top: 1px solid #f5c6cb; */
+    list-style: disc;
+    margin-left: 30px;
+    margin-top: 20px;
+    /* background-color: #f8d7da; */
     border-radius: 0.3rem;
 }
 
@@ -16,7 +32,7 @@
 }
 
 .alert-request-result .alert-title, .itens {
-    color: #d63031;
+    /* color: #d63031; */
     padding: 10px;
 }
 
@@ -25,8 +41,5 @@
     border-top: 1px solid #ff7675;
     list-style: disc;
     margin-left: 30px;
-}
-
-.alert-request-result .item {
     padding: 3px;
 }

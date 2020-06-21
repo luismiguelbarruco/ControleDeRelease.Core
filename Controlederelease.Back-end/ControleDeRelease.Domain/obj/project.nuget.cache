@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "jfWkjdsAPQDO/1R2EE+dz4bxVztMUvLc/DP6NWP1QNRjPp1lil3TZcFLa0nlECqzx0rBFAqfryjeRpueMNI++g==",
+  "dgSpecHash": "Y753ERe4vtiJogKXDV12OL1/jsIWOQc2MuqnWVGkqi83Fjkv6IdBRcCS4j+bz95kNA4sXJX/lbX92hXASQHpNg==",
   "success": true,
-  "projectFilePath": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj",
+  "projectFilePath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Luis.MICROLEME\\.nuget\\packages\\flunt\\1.0.4\\flunt.1.0.4.nupkg.sha512",
-    "C:\\Users\\Luis.MICROLEME\\.nuget\\packages\\litedb\\5.0.8\\litedb.5.0.8.nupkg.sha512",
-    "C:\\Users\\Luis.MICROLEME\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\Miguel\\.nuget\\packages\\flunt\\1.0.4\\flunt.1.0.4.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\litedb\\5.0.8\\litedb.5.0.8.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './components/templates/header';
-import Sidenav from './components/templates/sidenav';
+import Header from './components/header';
+import Sidenav from './components/sidenav';
 import Router from './router';
 import { BrowserRouter } from 'react-router-dom';
 

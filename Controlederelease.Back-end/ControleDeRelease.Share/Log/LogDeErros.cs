@@ -11,7 +11,7 @@ namespace ControleDeRelease.Share.Log
         private static readonly Encoding _Win1252 = Encoding.GetEncoding(1252);
         private static object _locker = new object();
 
-        public static readonly LogDeErros Default = new LogDeErros(Path.Combine(@"C:\Log", "ControleDeRelease.log"));
+        public static readonly LogDeErros Default = new LogDeErros(Path.Combine($@"{AppDomain.CurrentDomain.BaseDirectory}", "ControleDeRelease.log"));
 
         public string Arquivo => _arquivo;
 

@@ -37,7 +37,7 @@ namespace ControleDeRelease.Domain.Handlers
                 Versoes = command.Versoes
             };
 
-            if(!_projetoRepository.Cadastrar(projeto))
+            if (!_projetoRepository.Cadastrar(projeto))
                 return new CommandResult(false, "Ocorreu erro ao cadastrar o projeto.");
 
             return new CommandResult(true, "Projeto cadastrado com sucesso.");

@@ -64,8 +64,6 @@ D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\Co
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.csprojAssemblyReference.cache
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.AssemblyInfoInputs.cache
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.AssemblyInfo.cs
-D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.csproj.CoreCompileInputs.cache
-D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.MvcApplicationPartsAssemblyInfo.cache
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.RazorTargetAssemblyInfo.cache
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.csproj.CopyComplete
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\staticwebassets\ControleDeRelease.WebApi.StaticWebAssets.Manifest.cache
@@ -73,8 +71,6 @@ D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\Co
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.dll
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.pdb
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.genruntimeconfig.cache
-D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\LiteDB.pdb
-D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\LiteDB.xml
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.dll
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.pdb
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\appsettings.Development.json
@@ -103,3 +99,5 @@ D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeR
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\staticwebassets\ControleDeRelease.WebApi.StaticWebAssets.Manifest.cache
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\staticwebassets\ControleDeRelease.WebApi.StaticWebAssets.xml
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.genruntimeconfig.cache
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\obj\Debug\netcoreapp3.0\ControleDeRelease.WebApi.MvcApplicationPartsAssemblyInfo.cache

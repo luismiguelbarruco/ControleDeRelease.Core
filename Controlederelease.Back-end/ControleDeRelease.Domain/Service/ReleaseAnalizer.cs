@@ -18,25 +18,32 @@ namespace ControleDeRelease.Domain.Entities
             Projetos = projetos;
         }
 
-        public async Task<List<ItemLiberacaoRelease>> RunAsync()
+        public List<ItemLiberacaoRelease> Run()
         {
-            var tasks = new List<Task>();
+            var result = RunAsync();
+
+            return result.Result;
+        }
+
+        private async Task<List<ItemLiberacaoRelease>> RunAsync()
+        {
+            var thisLock = new object();
             var itens = new List<ItemLiberacaoRelease>();
 
-            //addionar tramanento de excessão
-            foreach (var projeto in Projetos)
+            await Task.Run(() =>
             {
-                tasks.Add(Task.Run(() =>
+                Parallel.ForEach(Projetos, projeto =>
                 {
                     var itemLiberacaoRelease = AnalisarItemLiberacaoRelease(projeto);
 
                     itens.Add(itemLiberacaoRelease);
 
-                    AddNotifications(itemLiberacaoRelease.Notifications);
-                }));
-            }
-
-            await Task.WhenAll(tasks);
+                    lock (thisLock)
+                    {
+                        AddNotifications(itemLiberacaoRelease.Notifications);
+                    }
+                });
+            });
 
             return itens;
         }
@@ -47,6 +54,9 @@ namespace ControleDeRelease.Domain.Entities
 
             var pathRelease = $@"{Versao.DiretorioRelease}\{projeto.Path}";
             var pathTeste = $@"{Versao.DiretorioTeste}\{projeto.Path}";
+
+            //var pathRelease = $@"D:\Downloads\Sql Server\SQLServer2019-DEV-x64-ENU.exe";
+            //var pathTeste = $@"D:\Downloads\Sql Server\SQLServer2019-DEV-x64-ENU.exe";
 
             if (itemLiberacaoRelease.Validate(pathRelease))
                 itemLiberacaoRelease.ReleaseAttriburesDiretorioRelese = FileInfoHelper.GetDataFileVersion(pathRelease);

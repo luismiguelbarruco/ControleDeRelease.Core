@@ -15,17 +15,14 @@ namespace ControleDeRelease.WebApi.Controllers
     {
         private readonly DataBaseContext _dataBaseContext;
 
-        public LiberacaoReleaseController(DataBaseContext dataBaseContext)
-        {
-            _dataBaseContext = dataBaseContext;
-        }
+        public LiberacaoReleaseController(DataBaseContext dataBaseContext) => _dataBaseContext = dataBaseContext;
 
         [HttpGet("{id}")]
         public ICommandResult Get(int id)
         {
-            var command = new AnalisarReleasesCommand{ Id = id };
-
             var unitOfWork = new UnitOfWork(_dataBaseContext);
+
+            var command = new AnalisarReleasesCommand{ Id = id };
 
             var versaoRepository = unitOfWork.GetVersaoProjetoRepository();
             var projetoRepository = unitOfWork.GetProjetoRepository();

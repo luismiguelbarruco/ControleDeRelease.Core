@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../../../assets/images/scope.png';
+import logo from '../../assets/images/scope.png';
 
 const Logo = () => {
     return (

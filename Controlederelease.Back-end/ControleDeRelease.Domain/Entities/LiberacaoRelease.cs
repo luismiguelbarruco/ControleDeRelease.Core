@@ -1,6 +1,4 @@
-﻿
-using ControleDeRelease.Domain.Poco;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace ControleDeRelease.Domain.Entities
@@ -13,6 +11,6 @@ namespace ControleDeRelease.Domain.Entities
 
         public DateTime Data { get; set; }
 
-        public List<ItemLiberacaoReleasePoco> Itens { get; set; }
+        public List<ItemLiberacaoRelease> Itens { get; set; }
     }
 }

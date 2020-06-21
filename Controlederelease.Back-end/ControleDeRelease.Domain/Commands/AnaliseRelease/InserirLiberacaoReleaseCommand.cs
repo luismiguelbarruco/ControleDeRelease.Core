@@ -9,7 +9,7 @@ namespace ControleDeRelease.Domain.Commands.AnaliseRelease
     public class InserirLiberacaoReleaseCommand : CommandBase
     {
         public Versao Versao { get; set; }
-        public List<ItemLiberacaoReleaseVireModel> Itens { get; set; }
+        public List<ItemLiberacaoReleaseViewModel> Itens { get; set; }
 
         public override void Validate()
         {

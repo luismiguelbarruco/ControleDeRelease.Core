@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\ControleDeRelease.WebApi.csproj": {}
+    "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\ControleDeRelease.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj": {
+    "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj",
         "projectName": "ControleDeRelease.Domain",
-        "projectPath": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj",
-        "packagesPath": "C:\\Users\\Luis.MICROLEME\\.nuget\\packages\\",
-        "outputPath": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj",
+        "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Luis.MICROLEME\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj": {
-                "projectPath": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj"
+              "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj"
               }
             }
           }
@@ -61,26 +64,43 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400-preview-015151\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj": {
+    "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj",
         "projectName": "ControleDeRelease.Share",
-        "projectPath": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj",
-        "packagesPath": "C:\\Users\\Luis.MICROLEME\\.nuget\\packages\\",
-        "outputPath": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj",
+        "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Luis.MICROLEME\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -119,26 +139,43 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400-preview-015151\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\ControleDeRelease.WebApi.csproj": {
+    "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\ControleDeRelease.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\ControleDeRelease.WebApi.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\ControleDeRelease.WebApi.csproj",
         "projectName": "ControleDeRelease.WebApi",
-        "projectPath": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\ControleDeRelease.WebApi.csproj",
-        "packagesPath": "C:\\Users\\Luis.MICROLEME\\.nuget\\packages\\",
-        "outputPath": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\ControleDeRelease.WebApi.csproj",
+        "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Luis.MICROLEME\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -151,11 +188,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj": {
-                "projectPath": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj"
+              "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Domain\\ControleDeRelease.Domain.csproj"
               },
-              "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj": {
-                "projectPath": "D:\\Desenv\\projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj"
+              "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj"
               }
             }
           }
@@ -184,6 +221,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.3, 3.0.3]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -192,7 +247,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400-preview-015151\\RuntimeIdentifierGraph.json"
         }
       }
     }

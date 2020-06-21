@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import HeaderSection from '../headerSection';
-import Alert from '../Alert';
+import HeaderSection from '../../components/headerSection';
+import Alert from '../../components/Alert';
 import api from '../../services/api';
 
 const Versoes = () => {

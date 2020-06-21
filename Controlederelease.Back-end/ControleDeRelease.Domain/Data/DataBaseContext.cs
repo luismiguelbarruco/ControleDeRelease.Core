@@ -1,4 +1,4 @@
-﻿using ControleDeRelease.Domain.Entities;
+﻿using ControleDeRelease.Share.Inicialization;
 using LiteDB;
 using System;
 
@@ -24,7 +24,7 @@ namespace ControleDeRelease.Domain.Data
         {
             return new ConnectionString
             {
-                Filename = @"D:\Desenvolvimento\Projetos\ControleDeRelease.Core\database.db",
+                Filename = new Inicialization().DataBasePath,
                 Connection = ConnectionType.Shared
             };
         }

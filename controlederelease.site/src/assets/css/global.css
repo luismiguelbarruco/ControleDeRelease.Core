@@ -135,6 +135,11 @@ body {
     margin-left: 5px;
 }
 
+.button[disabled] {
+    opacity: 0.5;
+    cursor: default;
+}
+
 .button-edit {
     color: #FFC107;
     border: none;

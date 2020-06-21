@@ -6,7 +6,7 @@ namespace ControleDeRelease.Domain.Entities
     {
         public string Release { get; private set; } = string.Empty;
 
-        public DateTime DataVersao { get; private set; } = DateTime.Now;   
+        public DateTime DataVersao { get; private set; } = DateTime.Now;
 
         public ReleaseAttributes(string release, DateTime dataVersao)
         {

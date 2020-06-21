@@ -30,10 +30,6 @@ D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\Co
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\obj\Debug\netcoreapp3.0\ControleDeRelease.Domain.csproj.CopyComplete
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\obj\Debug\netcoreapp3.0\ControleDeRelease.Domain.dll
 D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\obj\Debug\netcoreapp3.0\ControleDeRelease.Domain.pdb
-D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\bin\Debug\netcoreapp3.0\LiteDB.dll
-D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\bin\Debug\netcoreapp3.0\LiteDB.pdb
-D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\bin\Debug\netcoreapp3.0\LiteDB.xml
-D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\obj\Debug\netcoreapp3.0\ControleDeRelease.Domain.csproj.CoreCompileInputs.cache
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\obj\Debug\netcoreapp3.0\ControleDeRelease.Domain.dll
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\obj\Debug\netcoreapp3.0\ControleDeRelease.Domain.pdb
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\bin\Debug\netcoreapp3.0\ControleDeRelease.Domain.deps.json
@@ -46,3 +42,4 @@ D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeR
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\obj\Debug\netcoreapp3.0\ControleDeRelease.Domain.AssemblyInfo.cs
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\obj\Debug\netcoreapp3.0\ControleDeRelease.Domain.csproj.CoreCompileInputs.cache
 D:\Desenv\projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\obj\Debug\netcoreapp3.0\ControleDeRelease.Domain.csproj.CopyComplete
+D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\obj\Debug\netcoreapp3.0\ControleDeRelease.Domain.csproj.CoreCompileInputs.cache

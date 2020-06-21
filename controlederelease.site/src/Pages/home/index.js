@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import PageLoader from '../PageLoader/PageLoader';
-import Alert from '../Alert';
+import PageLoader from '../../components/PageLoader/PageLoader';
+import Alert from '../../components/Alert';
 import api from '../../services/api';
 
 import './style.css';
 
 const Home = () => {
 
-    const [alertVisible, setAlertVisible] = useState(false);
-    const [alertContent, setAlertContent] = useState({});
-    const [loading, setLoading] = useState(false);
-    const [analiseReleases, setAnaliseReleases] = useState([]);
+    const [sucess, setSucess] = useState(false);
     const [versoes, setVersoes] = useState([]);
-
+    const [loading, setLoading] = useState(false);
+    const [alertContent, setAlertContent] = useState({});
+    const [alertVisible, setAlertVisible] = useState(false);
+    const [analiseReleases, setAnaliseReleases] = useState([]);
+    
     useEffect(() => {
         handleGetVersoesAsync();
     }, []);
@@ -35,18 +36,23 @@ const Home = () => {
     async function handlePostAnaliseRelease() {
         try {
         
-            const liberacaoReleases = getLiberacaoReleases();
+            setAlertVisible(false);
 
-            console.log(liberacaoReleases);
+            const liberacaoReleases = getLiberacaoReleases();
 
             const response = await api.post('liberacaoRelease', liberacaoReleases);
 
-            console.log(response);
+            setSucess(response.data.sucess);
 
             if(!response.data.sucess) {
                 setAlertContent(response.data);
                 return;
             }
+
+            setAlertVisible(true);
+
+            setAlertContent({message : "Analise de liberação de release gravado com sucesso."});
+            setAnaliseReleases([]);
 
         } catch (error) {
             console.log(error);
@@ -56,7 +62,9 @@ const Home = () => {
     async function handleGetAnaliseAsync() {
         try {
             
+            setAlertVisible(false);
             setAnaliseReleases([]);
+            
             const $selectElemt = document.getElementById('versao');
             const id = $selectElemt.options[$selectElemt.selectedIndex].value;
 
@@ -64,9 +72,11 @@ const Home = () => {
 
             const response = await api.get(`liberacaoRelease/${id}`);
 
+            setSucess(response.data.sucess);
+
             if(!response.data.sucess) {
+                setAlertVisible(true);
                 setAlertContent(response.data);
-                toggle(true);
                 return;
             }
             
@@ -150,9 +160,7 @@ const Home = () => {
                             <React.Fragment>
                                 {renderVersoesOption()}
                                 <button className="button" onClick={handleGetAnaliseAsync}>Analisar</button>
-                                <button className="button button-primary" onClick={handlePostAnaliseRelease}>Salvar</button>
-                                {/* <Link to="./" className="button-analize" onClick={handleGetAnaliseAsync}>Analisar</Link>
-                                <Link to="./" className="button-analize button-primary">Salvar</Link> */}
+                                <button className="button button-primary" disabled={analiseReleases.length === 0} onClick={handlePostAnaliseRelease}>Salvar</button>
                             </React.Fragment>
                         )
                     }
@@ -165,7 +173,7 @@ const Home = () => {
                 }
             })()}
 
-            <Alert content={alertContent} isOpen={alertVisible} toggle={toggle}/>
+            <Alert content={alertContent} isOpen={alertVisible} toggle={toggle} sucess={sucess}/>
             <PageLoader loading={loading}/>
         </section>
     )

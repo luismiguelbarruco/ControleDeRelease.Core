@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import './style.css';
 
-const Alert = ({ content, isOpen, toggle }) => {
+const Alert = ({ content, isOpen, toggle, sucess }) => {
     
     useEffect(() => {
         toogleAlert(isOpen);
@@ -14,7 +14,7 @@ const Alert = ({ content, isOpen, toggle }) => {
     }
 
     return (
-        <div className="alert-request-result">
+        <div className={`alert-request-result ${sucess ? 'sucess' : 'error'} `}>
             <div className="alert-header">
                 <span className="alert-title">{content && content.message}</span>
                 <button type="button" className="close-button-modal" onClick={toggle}>

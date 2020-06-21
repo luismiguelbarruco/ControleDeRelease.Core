@@ -1,12 +1,9 @@
-﻿namespace ControleDeRelease.Share.Inicialization
+﻿using System;
+
+namespace ControleDeRelease.Share.Inicialization
 {
     public class Inicialization
     {
-        public string DataBasePath { get; set; }
-
-        public Inicialization()
-        {
-
-        }
+        public string DataBasePath => $@"{AppDomain.CurrentDomain.BaseDirectory}\database.db";
     }
 }

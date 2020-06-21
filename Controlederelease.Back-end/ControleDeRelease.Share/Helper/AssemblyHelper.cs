@@ -14,7 +14,7 @@ namespace ControleDeRelease.Share.Helper
         {
             get
             {
-                AssemblyTitleAttribute attribute = (AssemblyTitleAttribute)this._assembly.GetCustomAttributes(typeof(AssemblyTitleAttribute), false)[0];
+                AssemblyTitleAttribute attribute = (AssemblyTitleAttribute)_assembly.GetCustomAttributes(typeof(AssemblyTitleAttribute), false)[0];
 
                 return attribute.Title;
             }
