@@ -6,6 +6,7 @@ using ControleDeRelease.Domain.Handlers;
 using ControleDeRelease.Domain.Queries;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Linq;
 
 namespace ControleDeRelease.WebApi.Controllers

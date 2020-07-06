@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "UJ3f3108t2DlQslKdXGV9sZrqxiIU3HUPA/PtEj7n9FRkZiKjJWyIXbeV24pqnllaQ1S+WApN6ny6JVRrn4Qxw==",
+  "dgSpecHash": "xKMahk6T2x/WBNqJxF06jAzD5Yfgr0DL8X6W/ZzCfIm3jRoqeOOH2ERasqkmTrFRFNmmaaKDt3fYvp+iURKoPQ==",
   "success": true,
   "projectFilePath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.WebApi\\ControleDeRelease.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Miguel\\.nuget\\packages\\flunt\\1.0.4\\flunt.1.0.4.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\litedb\\5.0.8\\litedb.5.0.8.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.1\\microsoft.netcore.platforms.3.1.1.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\system.text.encoding.codepages\\4.7.1\\system.text.encoding.codepages.4.7.1.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",

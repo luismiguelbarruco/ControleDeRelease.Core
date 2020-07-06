@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "gjv/2ih9Ky8JiP1iO4dfx0fpE90wlpPtoc5ZeMCMxO5pM+TD3DMwpUrd/TFVOOosMcG/92FkOJ4FQvNllwha+A==",
+  "dgSpecHash": "ixQ/uPZkkG9zV/pu+Wyydy3PUnaxFn8XjGhAV+/H2sc34DznvGd2ar285gdg3GVq1c8UtE68GHmwnIGAEu7tYQ==",
   "success": true,
   "projectFilePath": "D:\\Desenvolvimento\\Projetos\\ControleDeRelease.Core\\Controlederelease.Back-end\\ControleDeRelease.Share\\ControleDeRelease.Share.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.1\\microsoft.netcore.platforms.3.1.1.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\system.text.encoding.codepages\\4.7.1\\system.text.encoding.codepages.4.7.1.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"

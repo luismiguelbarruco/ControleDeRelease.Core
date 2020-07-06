@@ -31,5 +31,7 @@ namespace ControleDeRelease.Domain.Entities
         }
 
         public List<Versao> Versoes { get; set; } = new List<Versao>();
+
+        public Versao Versao { get; set; }
     }
 }

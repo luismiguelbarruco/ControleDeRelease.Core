@@ -8,7 +8,7 @@ namespace ControleDeRelease.Share.Log
     public class LogDeErros
     {
         private readonly string _arquivo;
-        private static readonly Encoding _Win1252 = Encoding.GetEncoding(1252);
+        private static readonly Encoding _Win28591 = Encoding.GetEncoding(28591);
         private static object _locker = new object();
 
         public static readonly LogDeErros Default = new LogDeErros(Path.Combine($@"{AppDomain.CurrentDomain.BaseDirectory}", "ControleDeRelease.log"));
@@ -43,7 +43,7 @@ namespace ControleDeRelease.Share.Log
 
         protected virtual void Gravar(string arquivo, Exception erro, string mensagem)
         {
-            using StreamWriter streamWriter = new StreamWriter(arquivo, true, _Win1252);
+            using StreamWriter streamWriter = new StreamWriter(arquivo, true, _Win28591);
 
             streamWriter.WriteLine($"Assembly de Origem: {AssemblyName}.exe ({AssemblyVersion})");
             streamWriter.WriteLine("Ocorrido em {0:F}", DateTime.Now);

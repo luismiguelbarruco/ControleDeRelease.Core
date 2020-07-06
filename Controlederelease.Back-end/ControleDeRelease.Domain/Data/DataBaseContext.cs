@@ -1,4 +1,5 @@
 ﻿using ControleDeRelease.Share.Inicialization;
+using ControleDeRelease.Share.Log;
 using LiteDB;
 using System;
 
@@ -8,7 +9,20 @@ namespace ControleDeRelease.Domain.Data
     {
         private ILiteDatabase _dataBase { get; set; }
 
-        public DataBaseContext() => _dataBase = new LiteDatabase(CreateConnectionString());
+        public DataBaseContext()
+        {
+            try
+            {
+                _dataBase = new LiteDatabase(CreateConnectionString());
+
+                LogDeErros.Default.Gravar(new Exception(), "Conexão no banco de dados com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                LogDeErros.Default.Gravar(ex, "erro ao conectar no banco de dados!");
+                throw;
+            }
+        }
 
         public bool Commit() => _dataBase.Commit();
 

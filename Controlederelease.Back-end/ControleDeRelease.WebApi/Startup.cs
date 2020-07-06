@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Text;
 
 namespace ControleDeRelease.WebApi
 {
@@ -34,6 +35,8 @@ namespace ControleDeRelease.WebApi
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
+
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
