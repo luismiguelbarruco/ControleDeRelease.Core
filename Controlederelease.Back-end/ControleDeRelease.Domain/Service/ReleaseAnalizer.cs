@@ -22,6 +22,8 @@ namespace ControleDeRelease.Domain.Entities
         {
             var result = RunAsync();
 
+            result.Wait();
+
             return result.Result;
         }
 
@@ -30,7 +32,7 @@ namespace ControleDeRelease.Domain.Entities
             var thisLock = new object();
             var itens = new List<ItemLiberacaoRelease>();
 
-            await Task.Run(() =>
+            var result = Task.Run(() =>
             {
                 Parallel.ForEach(Projetos, projeto =>
                 {
@@ -44,6 +46,8 @@ namespace ControleDeRelease.Domain.Entities
                     }
                 });
             });
+
+            await result;
 
             return itens;
         }

@@ -2,6 +2,7 @@
 using ControleDeRelease.Share.Log;
 using LiteDB;
 using System;
+using System.IO;
 
 namespace ControleDeRelease.Domain.Data
 {
@@ -13,9 +14,18 @@ namespace ControleDeRelease.Domain.Data
         {
             try
             {
-                _dataBase = new LiteDatabase(CreateConnectionString());
+                var conenctionString = CreateConnectionString();
 
-                LogDeErros.Default.Gravar(new Exception(), "Conexão no banco de dados com sucesso!");
+                if (!File.Exists(conenctionString.Filename))
+                {
+                    var exception = new FileNotFoundException($"Arquivo {conenctionString.Filename} não encontrado.");
+                    
+                    LogDeErros.Default.Gravar(exception, $"Arquivo {conenctionString.Filename} não encontrado.");
+
+                    throw exception;
+                }
+
+                _dataBase = new LiteDatabase(CreateConnectionString());
             }
             catch (Exception ex)
             {

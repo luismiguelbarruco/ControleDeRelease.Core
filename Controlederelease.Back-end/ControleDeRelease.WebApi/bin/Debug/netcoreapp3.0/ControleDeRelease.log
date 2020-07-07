@@ -19,3 +19,38 @@ Exception of type 'System.Exception' was thrown.
 Origem
 Sem stack trace
 
+Assembly de Origem: ControleDeRelease.Share.exe (1.0.0)
+Ocorrido em terça-feira, 7 de julho de 2020 07:34:48
+Conexão no banco de dados com sucesso!
+Exception of type 'System.Exception' was thrown.
+Origem
+Sem stack trace
+
+Assembly de Origem: ControleDeRelease.Share.exe (1.0.0)
+Ocorrido em terça-feira, 7 de julho de 2020 07:35:03
+Conexão no banco de dados com sucesso!
+Exception of type 'System.Exception' was thrown.
+Origem
+Sem stack trace
+
+Assembly de Origem: ControleDeRelease.Share.exe (1.0.0)
+Ocorrido em terça-feira, 7 de julho de 2020 07:53:11
+erro ao conectar no banco de dados!
+Arquivo D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\\database.db não encontrado.
+Origem
+   at ControleDeRelease.Domain.Data.DataBaseContext..ctor() in D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\Data\DataBaseContext.cs:line 25
+
+Assembly de Origem: ControleDeRelease.Share.exe (1.0.0)
+Ocorrido em terça-feira, 7 de julho de 2020 07:54:46
+erro ao conectar no banco de dados!
+Arquivo D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\\database.db não encontrado.
+Origem
+Sem stack trace
+
+Assembly de Origem: ControleDeRelease.Share.exe (1.0.0)
+Ocorrido em terça-feira, 7 de julho de 2020 07:54:48
+erro ao conectar no banco de dados!
+Arquivo D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.WebApi\bin\Debug\netcoreapp3.0\\database.db não encontrado.
+Origem
+   at ControleDeRelease.Domain.Data.DataBaseContext..ctor() in D:\Desenvolvimento\Projetos\ControleDeRelease.Core\Controlederelease.Back-end\ControleDeRelease.Domain\Data\DataBaseContext.cs:line 28
+
