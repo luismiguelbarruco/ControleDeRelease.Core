@@ -49,14 +49,14 @@ namespace ControleDeRelease.Domain.Handlers
             if(!projetos.Any())
                 return new CommandResult(false, "Nenhum projeto encontrado");
 
-            var releaseAnalizer = new ReleaseAnalizer(versao, projetos);
+            var releaseAnalizerService = new ReleaseAnalizerService(versao, projetos);
 
-            var analizerResult = releaseAnalizer.Run();
+            var analizerServiceResult = releaseAnalizerService.Run();
 
-            if (releaseAnalizer.Notifications.Any())
-                return new CommandResult(false, "Não foi possivel analisar as releases", releaseAnalizer.Notifications);
+            if (releaseAnalizerService.Notifications.Any())
+                return new CommandResult(false, "Não foi possivel analisar as releases", releaseAnalizerService.Notifications);
 
-            var itens = new ItensLiberacaoReleaseViewModel().Parse(analizerResult);
+            var itens = new ItensLiberacaoReleaseViewModel().Parse(analizerServiceResult);
 
             return new CommandResult(true, itens);
         }

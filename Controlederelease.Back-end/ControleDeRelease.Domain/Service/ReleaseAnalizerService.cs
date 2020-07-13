@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ControleDeRelease.Domain.Entities
 {
-    public class ReleaseAnalizer : Notifiable
+    public class ReleaseAnalizerService : Notifiable
     {
         public Versao Versao { get; private set; }
 
         public List<Projeto> Projetos { get; private set; }
 
-        public ReleaseAnalizer(Versao versao, List<Projeto> projetos)
+        public ReleaseAnalizerService(Versao versao, List<Projeto> projetos)
         {
             Versao = versao;
             Projetos = projetos;
@@ -21,9 +21,7 @@ namespace ControleDeRelease.Domain.Entities
         public List<ItemLiberacaoRelease> Run()
         {
             var result = RunAsync();
-
-            result.Wait();
-
+            
             return result.Result;
         }
 
@@ -32,7 +30,7 @@ namespace ControleDeRelease.Domain.Entities
             var thisLock = new object();
             var itens = new List<ItemLiberacaoRelease>();
 
-            var result = Task.Run(() =>
+            await Task.Run(() =>
             {
                 Parallel.ForEach(Projetos, projeto =>
                 {
@@ -47,8 +45,6 @@ namespace ControleDeRelease.Domain.Entities
                 });
             });
 
-            await result;
-
             return itens;
         }
 
@@ -59,8 +55,8 @@ namespace ControleDeRelease.Domain.Entities
             var pathRelease = $@"{Versao.DiretorioRelease}\{projeto.Path}";
             var pathTeste = $@"{Versao.DiretorioTeste}\{projeto.Path}";
 
-            //var pathRelease = $@"D:\Downloads\Sql Server\SQLServer2019-DEV-x64-ENU.exe";
-            //var pathTeste = $@"D:\Downloads\Sql Server\SQLServer2019-DEV-x64-ENU.exe";
+            //var pathRelease = $@"\\DESKTOP-G5H59F1\Teste\executavel\android-studio.exe";
+            //var pathTeste = $@"\\DESKTOP-G5H59F1\Teste\executavel\android-studio.exe";
 
             if (itemLiberacaoRelease.Validate(pathRelease))
                 itemLiberacaoRelease.ReleaseAttriburesDiretorioRelese = FileInfoHelper.GetDataFileVersion(pathRelease);
