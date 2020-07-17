@@ -52,8 +52,8 @@ namespace ControleDeRelease.Domain.Entities
         {
             var itemLiberacaoRelease = new ItemLiberacaoRelease(projeto);
 
-            var pathRelease = $@"{Versao.DiretorioRelease}\{projeto.Path}";
-            var pathTeste = $@"{Versao.DiretorioTeste}\{projeto.Path}";
+            var pathRelease = $@"{Versao.DiretorioRelease}\{projeto.PathRelease}";
+            var pathTeste = $@"{Versao.DiretorioTeste}\{projeto.PathTeste}";
 
             //var pathRelease = $@"\\DESKTOP-G5H59F1\Teste\executavel\android-studio.exe";
             //var pathTeste = $@"\\DESKTOP-G5H59F1\Teste\executavel\android-studio.exe";

@@ -33,7 +33,8 @@ namespace ControleDeRelease.Domain.Handlers
             var projeto = new Projeto
             {
                 Nome = command.Nome,
-                Subpasta = command.Subpasta,
+                SubpastaRelease = command.SubpastaRelease,
+                SubpastaTeste = command.SubpastaTeste,
                 Versoes = command.Versoes
             };
 
@@ -71,7 +72,8 @@ namespace ControleDeRelease.Domain.Handlers
             {
                 Id = command.Id,
                 Nome = command.Nome,
-                Subpasta = command.Subpasta,
+                SubpastaRelease = command.SubpastaRelease,
+                SubpastaTeste = command.SubpastaTeste,
                 Versoes = command.Versoes
             };
 

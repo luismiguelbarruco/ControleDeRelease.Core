@@ -5,28 +5,30 @@ namespace ControleDeRelease.Domain.Entities
 {
     public class Projeto : EntityBase
     {
-        private string _subpasta;
-        public string Subpasta
-        {
-            get { return _subpasta; }
-            set 
-            {
-                if (value == null)
-                    value = string.Empty;
+        public string SubpastaRelease { get; set; }
+        public string SubpastaTeste { get; set; }
 
-                _subpasta = value; 
-            }
-        }
-
-        public string Path
+        public string PathRelease
         {
             get
             {
-                if(string.IsNullOrEmpty(Subpasta))
+                if(string.IsNullOrEmpty(SubpastaRelease))
                     return $@"{Nome}";
 
                 else
-                    return $@"{Subpasta}\{Nome}";
+                    return $@"{SubpastaRelease}\{Nome}";
+            }
+        }
+
+        public string PathTeste
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(SubpastaTeste))
+                    return $@"{Nome}";
+
+                else
+                    return $@"{SubpastaTeste}\{Nome}";
             }
         }
 

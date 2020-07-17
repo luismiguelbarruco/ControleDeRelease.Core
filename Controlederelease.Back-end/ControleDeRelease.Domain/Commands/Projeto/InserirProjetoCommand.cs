@@ -7,7 +7,8 @@ namespace ControleDeRelease.Domain.Commands.Projeto
     public class InserirProjetoCommand : CommandBase
     {
         public string Nome { get; set; }
-        public string Subpasta { get; set; }
+        public string SubpastaRelease { get; set; }
+        public string SubpastaTeste { get; set; }
         public List<Versao> Versoes { get; set; }
 
         public override void Validate()

@@ -9,7 +9,8 @@ const Projetos = () => {
 
     const [id, setId] = useState(0);
     const [nome, setNome] = useState('');
-    const [subpasta, setSubpasta] = useState('');
+    const [subpastaRelease, setSubpastaRelease] = useState('');
+    const [subpastaTeste, setSubpastaTeste] = useState('');
     const [operation, setOperation] = useState(1);
     const [projetos, setProjetos] = useState([]);
     const [versoes, setVersoes] = useState([]);
@@ -75,14 +76,16 @@ const Projetos = () => {
     function carregarDadosProjeto(projeto) {
         setId(projeto.id);
         setNome(projeto.nome);
-        setSubpasta(projeto.subpasta);
+        setSubpastaRelease(projeto.subpastaRelease);
+        setSubpastaTeste(projeto.subpastaTeste);
         setVersoesSelected(projeto.versoes);
     }
 
     function setProjetoIni() {
         setId(0);
         setNome('');
-        setSubpasta('');
+        setSubpastaRelease('');
+        setSubpastaTeste('');
         setVersoesSelected([]);
     }
 
@@ -125,7 +128,8 @@ const Projetos = () => {
             const params = id ? `/${id}` : '';
             let projeto = { 
                 nome, 
-                subpasta,
+                subpastaRelease,
+                subpastaTeste,
                 versoes: versoesSelected
             }
 
@@ -156,7 +160,8 @@ const Projetos = () => {
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Projeto</th>
-                        <th scope="col">Subpasta</th>
+                        <th scope="col">Subpasta Release</th>
+                        <th scope="col">Subpasta Teste</th>
                         <th scope="col">Versões</th>
                         <th scope="col">Ações</th>
                     </tr>
@@ -184,7 +189,8 @@ const Projetos = () => {
                 <tr key={projeto.id}>
                     <th scope="row">{projeto.id}</th>
                     <td>{projeto.nome}</td>
-                    <td>{projeto.subpasta}</td>
+                    <td>{projeto.subpastaRelease}</td>
+                    <td>{projeto.subpastaTeste}</td>
                     <td>{renderVersoes(projeto.versoes)}</td>
                     <th>
                         <button className="button-edit" onClick={() => carregarDadosProjeto(projeto)}>
@@ -241,15 +247,27 @@ const Projetos = () => {
                     />
                 </div>
                 <div className="control-group">
-                    <label htmlFor="subpasta">Subpasta</label>
+                    <label htmlFor="subpasta">Subpasta Release</label>
                     <input 
                         type="text" 
-                        name="subpasta" 
-                        placeholder="Subpasta..." 
+                        name="subpastaRelease" 
+                        placeholder="Subpasta release..." 
                         className="input" 
-                        value={subpasta} 
+                        value={subpastaRelease} 
                         onChange={e => 
-                        setSubpasta(e.target.value) } 
+                        setSubpastaRelease(e.target.value) } 
+                    />
+                </div>
+                <div className="control-group">
+                    <label htmlFor="subpasta">Subpasta Teste</label>
+                    <input 
+                        type="text" 
+                        name="subpastaTeste" 
+                        placeholder="Subpasta teste..." 
+                        className="input" 
+                        value={subpastaTeste}
+                        onChange={e => 
+                        setSubpastaTeste(e.target.value) } 
                     />
                 </div>
                 <div className="controls controls-checkbox">
