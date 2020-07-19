@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ControleDeRelease.Domain.VireModel
+namespace ControleDeRelease.Domain.ViewModel
 {
     public class LibercaoReleaseViewModel
     {

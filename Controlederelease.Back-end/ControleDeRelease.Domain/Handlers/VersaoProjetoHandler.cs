@@ -5,8 +5,6 @@ using ControleDeRelease.Domain.Entities;
 using ControleDeRelease.Domain.Queries;
 using ControleDeRelease.Domain.Repository;
 using Flunt.Notifications;
-using System;
-using System.Linq.Expressions;
 
 namespace ControleDeRelease.Domain.Handlers
 {
@@ -36,8 +34,8 @@ namespace ControleDeRelease.Domain.Handlers
             var versao = new Versao
             {
                 Nome = command.Nome,
-                DiretorioRelease = command.DiretorioRelease,
-                DiretorioTeste = command.DiretorioTeste,
+                DiretorioRelease = $@"{command.DiretorioRelease}",
+                DiretorioTeste = $@"{command.DiretorioTeste}",
             };
 
             if (!_versaoProjetoRepository.Cadastrar(versao))
@@ -74,8 +72,8 @@ namespace ControleDeRelease.Domain.Handlers
             {
                 Id = command.Id,
                 Nome = command.Nome,
-                DiretorioRelease = command.DiretorioRelease,
-                DiretorioTeste = command.DiretorioTeste,
+                DiretorioRelease = $@"{command.DiretorioRelease}",
+                DiretorioTeste = $@"{command.DiretorioTeste}",
             };
 
             if(!_versaoProjetoRepository.Atualizar(versao))

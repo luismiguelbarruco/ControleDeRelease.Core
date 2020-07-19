@@ -1,6 +1,6 @@
 ﻿using ControleDeRelease.Domain.Enums;
 using ControleDeRelease.Domain.Extensions;
-using ControleDeRelease.Domain.VireModel;
+using ControleDeRelease.Domain.ViewModel;
 using Flunt.Notifications;
 using System;
 using System.IO;

@@ -2,7 +2,7 @@
 using ControleDeRelease.Domain.Data;
 using ControleDeRelease.Domain.Data.UnitOfWork;
 using ControleDeRelease.Domain.Queries;
-using ControleDeRelease.Domain.VireModel;
+using ControleDeRelease.Domain.ViewModel;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 

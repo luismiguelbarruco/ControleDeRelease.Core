@@ -1,7 +1,7 @@
 ﻿using ControleDeRelease.Domain.Entities;
 using System.Collections.Generic;
 
-namespace ControleDeRelease.Domain.VireModel
+namespace ControleDeRelease.Domain.ViewModel
 {
     public class ItensLiberacaoReleaseViewModel
     {

@@ -1,6 +1,6 @@
 ﻿
 using ControleDeRelease.Domain.Entities;
-using ControleDeRelease.Domain.VireModel;
+using ControleDeRelease.Domain.ViewModel;
 using Flunt.Validations;
 using System.Collections.Generic;
 

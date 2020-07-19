@@ -2,7 +2,7 @@
 using ControleDeRelease.Domain.Extensions;
 using System;
 
-namespace ControleDeRelease.Domain.VireModel
+namespace ControleDeRelease.Domain.ViewModel
 {
     public class ItemLiberacaoReleaseViewModel
     {

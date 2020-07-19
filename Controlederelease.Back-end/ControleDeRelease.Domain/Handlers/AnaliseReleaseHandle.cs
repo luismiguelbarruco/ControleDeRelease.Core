@@ -3,7 +3,7 @@ using ControleDeRelease.Domain.Commands.AnaliseRelease;
 using ControleDeRelease.Domain.Entities;
 using ControleDeRelease.Domain.Queries;
 using ControleDeRelease.Domain.Repository;
-using ControleDeRelease.Domain.VireModel;
+using ControleDeRelease.Domain.ViewModel;
 using Flunt.Notifications;
 using System;
 using System.Linq;

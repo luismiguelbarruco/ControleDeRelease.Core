@@ -1,4 +1,4 @@
-﻿using ControleDeRelease.Domain.VireModel;
+﻿using ControleDeRelease.Domain.ViewModel;
 using System.Collections.Generic;
 
 namespace ControleDeRelease.Domain.Entities
